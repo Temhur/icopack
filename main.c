@@ -65,12 +65,7 @@ int main(int argc, char *argv[])
 
     if (argc < 3 || argc > 16)
     {
-        printf("icopack Copyright (c) 2021 Optidash GmbH\n");
-        printf("Combines multiple PNG images into a single ICO file\n");
-        printf("Source images must be <= 256 pixels in each dimension\n\n");
-        printf("Usage: icopack <outfile> <infile_1> <infile_2> <infile_N>\n");
-        printf("example:\n\n");
-        printf("icopack out.ico favicon1.png favicon2.png favicon3.png\n");
+        printf("Usage: png2ico <outfile> <pngfile_1> <pngfile_2> <pngfile_N>\n");
         return 0; // no filenames passed
     }
     iFileCount = argc - 2;
