@@ -1,4 +1,4 @@
-name: Build and Release main.exe
+name: Build main.exe
 
 on:
   push:
@@ -24,9 +24,8 @@ jobs:
       run: |
         gcc main.c -o main.exe
 
-    - name: Create Release and Upload EXE
-      uses: softprops/action-gh-release@v1
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
       with:
-        files: ./main.exe
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        name: main-exe
+        path: ./main.exe
